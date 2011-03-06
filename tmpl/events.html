@@ -1,0 +1,19 @@
+{{if !$item.data.hasUpcomingEvents()}}
+    <h4>No upcoming events,<br />check back soon!</h4>
+{{else}}
+    <ul class="fabs-facebook-events">
+        {{each(index,event) $item.data.getUpcomingEvents()}}
+            {{tmpl(event) "#fabs-facebook-event-tmpl"}}
+        {{/each}}
+    </ul>
+{{/if}}
+{{if $item.data.hasPastEvents()}}
+    <a href="javascript:;" class="fabs-facebook-past-events-toggle">
+        Show Past Events
+    </a>
+    <ul class="fabs-facebook-events fabs-facebook-events-past">
+        {{each(index,event) $item.data.getPastEvents()}}
+            {{tmpl(event) "#fabs-facebook-event-tmpl"}}
+        {{/each}}
+    </ul>
+{{/if}}    

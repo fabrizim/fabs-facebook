@@ -1,0 +1,69 @@
+.fb-loading{ height: 36px; background: transparent url(images/loading.gif) no-repeat center center; }
+
+/**
+ * Feed Style
+ */
+.fabs-facebook-message { clear: both; padding: 6px; display: block; }
+.fabs-facebook-message .profile-pic{ float: left; margin: 0px 10px 2px 0px; }
+.fabs-facebook-message ul{ }
+.fabs-facebook-message .message-body{ margin-left: 60px; }
+.fabs-facebook-message .message-body-content{ padding: 4px 0; }
+.fabs-facebook-message .meta{ clear: both; font-size: .9em; color: #666; display: block; text-decoration: none; }
+.fabs-facebook-message a.meta:hover{ text-decoration: none; }
+
+.top-arrow{ border-color:transparent transparent #f3f3f3; border-style:solid; border-width:0 6px 6px; height:0; margin:0 10px; width:0; display: block; }
+.comment-box{ background: #f3f3f3; margin: 12px 0 4px; padding-top: 2px; position: relative; display: none;}
+.display-comments{ display: block; }
+.comment-box .comments{ display: block; padding: 2px 4px; font-size: .9em; }
+.comment-box .comments-show-all{ display: block; padding: 4px; text-align: left; }
+.comment-box .top-arrow{ bottom: 100%; left: 10px; position: absolute; }
+.fabs-facebook-comments .fabs-facebook-message{ padding: 2px 4px; background: #f3f3f3; margin: 4px 0; }
+.fabs-facebook-comments{ margin-top: 4px; }
+.fabs-facebook-messages, .fabs-facebook-messages ul{ padding: 0; margin: 0; line-height: 1.2em;}
+.fabs-facebook-messages .fabs-facebook-message .message-body{ margin-left: 0px; }
+
+.img-box{ display: inline-block; margin: 0 6px 0 0; float: left; position: relative; }
+.video-img-box i{ background: url(http://b.static.ak.fbcdn.net/rsrc.php/zr/r/XXVvDYAks_i.png) no-repeat 0px 0px; bottom: 0px; height: 32px; left: 0px; position: absolute; width: 39px; cursor: pointer; }
+
+.sprite-icon{ background-image: url(images/facebook-sprite.png); background-repeat: no-repeat; display: inline-block; width: 16px; height: 16px; vertical-align: middle; }
+.fabs-facebook-message .likes, .fabs-facebook-message .comments-link{ float: right; margin-left: 10px;}
+.icon-like{ background-position: 0px -88px; height: 14px;}
+.icon-comment{ background-position: -17px -37px; }
+
+/**
+ * Event Styles
+ */
+.fabs-facebook-event{ clear: both; }
+.fabs-facebook-event{ clear: both; padding: 6px; display: block;  }
+.event-pic{ float: left; margin: 0 10px 2px 0; }
+.event-time{ text-align: left; font-weight: bold; margin: 4px 0; }
+.event-details{ margin-left: 60px; }
+.event-description, .link-description{ color: #999; font-size: .9em; }
+.fabs-facebook-events{ padding: 0; margin: 0; line-height: 1.2em;}
+.fabs-facebook-past-events-toggle{ display: block; clear: both; }
+.fabs-facebook-events-past{ display: none; background: #f3f3f3; overflow: hidden; clear: both; }
+
+/**
+ * Albums Styles
+ */
+.fabs-facebook-albums{ list-style: none; margin: 0; padding: 0;}
+.fabs-facebook-albums-item{ display: block; list-style: none; margin: 0; float: left; padding: 8px; margin: 4px; width: 133px; cursor: pointer; }
+.fabs-facebook-albums-item .fabs-facebook-album-cover{ display: block; height: 133px; width: 133px; background-position: 50% 50%; background-repeat: no-repeat; margin: 0 auto; }
+.fabs-facebook-albums-item-hover, .fabs-facebook-albums-item:hover{ background: #f3f3f3; border: 1px solid #d0d0d0; padding: 7px;}
+.fabs-facebook-album-name{ display: block; }
+.fabs-facebook-album-count{ display: block; margin-top: 4px; color: #666; }
+
+.fabs-facebook-album{ list-style: none; margin: 0; padding: 0;}
+.fabs-facebook-album-item{ display: block; list-style: none; margin: 0; float: left; margin: 4px; width: 172px; cursor: pointer; }
+.fabs-facebook-album-item:hover .fabs-facebook-photo-thumb-ct{background-color: #d0d0d0; border: 1px solid #b8b8b8;}
+.fabs-facebook-album-item .fabs-facebook-photo-thumb-ct{padding: 5px; background-color: #f3f3f3; border: 1px solid #d0d0d0;}
+.fabs-facebook-album-item .fabs-facebook-photo-thumb{ display: block; height: 120px; width: 160px; background-position: 50% 50%; background-repeat: no-repeat; margin: 0 auto; }
+
+.fabs-facebook-photo-nav{ float: right; }
+.fabs-facebook-photo-container{ text-align: center; min-height: 400px;}
+.fabs-facebook-photo-container img{ max-width: 100%; }
+.fabs-facebook-photo-link-next{ cursor: pointer; }
+
+.fabs-facebook-cards{ overflow: hidden; }
+.fabs-facebook-card{ position: absolute; width: 100%; margin-left: -100000em; }
+.active-card{ position: relative; margin-left: 0; }

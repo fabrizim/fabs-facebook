@@ -1,0 +1,63 @@
+{{if from}}
+    <li class="fabs-facebook-message">
+        <a target="_blank" href="http://facebook.com/profile.php?id=${from.id}">
+        <img src="http://graph.facebook.com/${from.id}/picture" alt="${from.name}" class="profile-pic" />
+        </a>
+        <div class="message-body">
+            <div class="message-body-ct">
+                <div class="name">
+                    <a target="_blank" href="http://facebook.com/profile.php?id=${from.id}" class="name-link">${from.name}</a>
+                    ${message}
+                </div>
+                <div class="message-body-content">
+                    {{if $item.data.type == 'status'}}
+                        {{tmpl "#fabs-facebook-message-status-tmpl"}}
+                    {{else $item.data.type == 'link'}}
+                        {{tmpl "#fabs-facebook-message-link-tmpl"}}
+                    {{else $item.data.type == 'video'}}
+                        {{tmpl "#fabs-facebook-message-video-tmpl"}}
+                    {{else $item.data.type == 'photo'}}
+                        {{tmpl "#fabs-facebook-message-link-tmpl"}}
+                    {{else}}
+                        {{tmpl "#fabs-facebook-message-default-tmpl"}}
+                    {{/if}}
+                </div>
+                {{if $item.data.isPost()}}
+                <div class="meta">
+                    {{if likes}}
+                        <span class="likes">{{html $item.data.niceLikes()}}</span>
+                    {{/if}}
+                    {{if $item.data.comments && $item.data.comments.count}}
+                        <a href="javascript:;" class="comments-link" id="fabsfb-comments-link-${id}">{{html $item.data.niceComments()}}</a>
+                    {{/if}}
+                    <a href="${$item.data.getPostLink()}" target="_blank">
+                        <span class="timeago">${$item.data.timeago()}</span>
+                    </a>
+                </div>
+                {{else}}
+                <div class="meta" href="http://www.facebook.com/${id}">
+                    <span class="timeago">${$item.data.timeago()}</span>
+                    {{if likes}}
+                        <span class="likes">{{html $item.data.niceLikes()}}</span>
+                    {{/if}}
+                </div>
+                {{/if}}
+            </div>
+        </div>
+        {{if $item.data.comments && $item.data.comments.count}}
+        <div class="comment-box{{if $item.data.displayComments}} display-comments{{/if}}" id="fabsfb-comments-box-${id}">
+            <i class="top-arrow"></i>
+            {{if $item.data.comments.count > $item.data.comments.data.length}}
+            <span class="comments">
+                <a class="comments-show-all" href="javascript:;"><i class="sprite-icon icon-comment"></i>View all ${$item.data.comments.count} comments</a>
+            </span>
+            {{/if}}
+            <ul class="fabs-facebook-messages fabs-facebook-comments">
+            {{each(index,comment) $item.data.comments.data}}
+                {{tmpl(comment) '#fabs-facebook-message-tmpl'}}
+            {{/each}}
+            </ul>
+        </div>
+        {{/if}}
+    </li>
+{{/if}}

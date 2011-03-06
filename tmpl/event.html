@@ -1,0 +1,24 @@
+<li class="fabs-facebook-event fabs-facebook-event-{{if past}}past{{else}}future{{/if}}">
+    <div class="event-time">
+        ${$item.data.getTime()}
+    </div>
+    <img class="event-pic" src="http://graph.facebook.com/${id}/picture" />
+    <div class="event-details">
+        <div class="event-title">
+            <a href="http://facebook.com/event.php?eid=${id}" target="_blank">
+                ${name}
+            </a>
+        </div>
+        {{if $item.data.location}}
+        <div class="event-location">
+            {{html $item.data.location}}
+        </div>
+        {{/if}}
+        
+        {{if $item.data.description}}
+        <div class="event-description">
+            {{html $item.data.description}}
+        </div>
+        {{/if}}
+    </div>
+</li>

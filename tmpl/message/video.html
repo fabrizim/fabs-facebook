@@ -1,0 +1,16 @@
+{{if link}}
+    
+    {{if picture}}
+    <a target="_blank" href="${link}" class="img-box video-link">
+        <img src="${picture}" alt="${name}" />
+        <i></i>
+    </a>
+    {{/if}}
+    {{if name}}
+        <div class="link-name"><a target="_blank" href="${link}">${name}</a></div>
+    {{/if}}
+    {{if description}}
+        <div class="link-description">${$item.data.shortDescription()}</div>
+    {{/if}}
+    
+{{/if}}
